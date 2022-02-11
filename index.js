@@ -28,6 +28,11 @@ async function main() {
 // Db connection ends here
 
 // Authentication APIs Start
+
+app.get("/", (req, res) => {
+  res.send("SERVER IS RUNNING.....");
+});
+
 app.post("/signup", async (req, res) => {
   let password = req.body.password;
   const hashed_password = bcrypt.hashSync(password, 10);
