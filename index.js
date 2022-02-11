@@ -20,7 +20,9 @@ main().catch((err) => console.error(err));
 main().then((response) => console.debug("Db connected..."));
 
 async function main() {
-  await mongoose.connect("mongodb://localhost:27017/test");
+  await mongoose.connect(
+    "mongodb+srv://satyam:1rMQizk1po0AWpzJ@cluster0.gdwts.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+  );
 }
 
 // Db connection ends here
